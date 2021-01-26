@@ -10,4 +10,6 @@ with open('C:/Users/nosquest17/Desktop/Sujong/daily_works/20210125_read_vacuum_d
         x.append(row[0])
         y.append(row[1])
 
+print(x[0])
+
 
