@@ -1,11 +1,13 @@
 import numpy as np
+import csv
 
-array_from_file = np.loadtxt("C:/Users/nosquest17/Desktop/Sujong/daily_works/20210125_read_vacuum_data/TB30Pressure-2021-01-22.log", dtype=str)
+x = []
+y = []
 
-print(len(array_from_file))
-time_high_vacuum = np.zeros(shape=(len(array_from_file),2))
+with open('C:/Users/nosquest17/Desktop/Sujong/daily_works/20210125_read_vacuum_data/TB30Pressure-2021-01-22.csv', 'rt', encoding='UTF8') as csvfile:
+    plots = csv.reader(csvfile, delimiter = ',')
+    for row in plots:
+        x.append(row[0])
+        y.append(row[1])
 
-#time_high_vacuum = array_from_file[:,0]
 
-print(time_high_vacuum)
-print(array_from_file[0][1])
